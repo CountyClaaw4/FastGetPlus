@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Fastget+ 設定</title>
+<style>
+
+body[data-theme="light"] {
+    --bg-color: #f5f6fa;
+    --card-bg: #fff;
+    --text-color: #333;
+    --input-bg: #fff;
+    --input-border: #ccc;
+    --button-bg: #4a90e2;
+    --button-hover: #357ABD;
+    --status-info: #555;
+    --status-success: #28a745;
+    --status-error: #dc3545;
+}
+
+body[data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --card-bg: #2b2b2b;
+    --text-color: #eee;
+    --input-bg: #3a3a3a;
+    --input-border: #555;
+    --button-bg: #4a90e2;
+    --button-hover: #357ABD;
+    --status-info: #bbb;
+    --status-success: #4cd964;
+    --status-error: #ff5c5c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    width: 360px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.5);
+    outline: none;
+}
+
+input.error {
+    animation: flash-border 0.5s;
+}
+
+@keyframes flash-border {
+    0% { border-color: var(--status-error); }
+    50% { border-color: var(--input-border); }
+    100% { border-color: var(--status-error); }
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#status-message {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    min-height: 18px;
+}
+
+#status-message.info { color: var(--status-info); }
+#status-message.success { color: var(--status-success); }
+#status-message.error { color: var(--status-error); }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-5px); }
+}
+
+#status-message.fade-in { animation: fadeIn 0.3s ease forwards; }
+#status-message.fade-out { animation: fadeOut 0.3s ease forwards; }
+
+#status-message.success::after {
+    content: " ✔";
+    display: inline-block;
+    margin-left: 5px;
+    animation: pop 0.3s ease forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="icon.png" alt="Fastget+ アイコン" class="icon">
+    <h1>Fastget+ v1.0.0</h1>
+
+    <label for="api-url">API URL:</label>
+    <input type="text" id="api-url" placeholder="http://localhost:4001" />
+
+    <label for="api-key">APIキー (任意):</label>
+    <input type="text" id="api-key" placeholder="例: abc123XYZ" />
+
+    <button id="test-connection">接続テスト</button>
+
+    <p id="status-message"></p>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
