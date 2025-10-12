@@ -1,49 +1,47 @@
 {
   "manifest_version": 3,
-  "name": "FastGet",
-  "version": "1.0",
-  "description": "FastServerのSpigotMCプラグインを簡単に導入できる拡張機能です",
-
+  "name": "Fastget+",
+  "version": "1.0.0",
+  "description": "SpigotプラグインをFastServerに簡単転送するChrome拡張機能",
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab",
+    "scripting",
+    "downloads"
   ],
-
   "host_permissions": [
-    "https://www.spigotmc.org/resources/*",
+    "https://*.spigotmc.org/*",
     "http://localhost:4001/*"
   ],
-
+  "action": {
+    "default_popup": "core/popup.html",
+    "default_icon": "images/defaulticon.png",
+    "default_title": "Fastget+"
+  },
   "content_scripts": [
     {
       "matches": [
-        "https://www.spigotmc.org/resources/*"
+        "https://*.spigotmc.org/resources/*"
       ],
-      "js": [
-        "content.js","help.js","lang.js","logo_replace.js"
-      ],
-      "css": [
-        "xpAnimation.css"
-      ]
+      "js": ["core/content.js"],
+      "run_at": "document_idle"
     }
   ],
-
+  "options_page": "core/options.html",
   "web_accessible_resources": [
     {
       "resources": [
-        "xpAnimation.css",
-        "img/spigot.png",
-        "img/yt.png",
-        "img/google.png",
-        "img/info.png",
-        "langs/*"
+        "images/*.png"
       ],
       "matches": [
         "<all_urls>"
       ]
     }
-  ],
-
-  "icons": {
-    "48": "icon.png"
-  }
+  ]
 }
