@@ -1,2 +1,3 @@
 # fastget+
-# 注意：開発中のため､まだこの拡張機能を使用することはできません！
+Fastget+は[Fastget](https://github.com/zerozshare/FastGet)を最新のAPIに対応するように再設計したChrome拡張機能です｡
+> ⚠️ **注意:** この拡張機能をを勝手に Chrome ウェブストアにアップロードしないでください。
