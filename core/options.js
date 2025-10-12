@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveButton = document.getElementById('save-options');
     const saveStatus = document.getElementById('save-status');
     const body = document.body;
-
+ 
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const setTheme = (isDark) => { body.dataset.theme = isDark ? 'dark' : 'light'; };
     setTheme(darkModeMediaQuery.matches);
