@@ -21,7 +21,7 @@
   ],
   "action": {
     "default_popup": "core/popup.html",
-    "default_icon": "images/defaulticon.png",
+    "default_icon": "images/fssicon.png",
     "default_title": "Fastget+"
   },
   "content_scripts": [
