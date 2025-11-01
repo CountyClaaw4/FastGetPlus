@@ -10,6 +10,6 @@ Fastget+は[Fastget](https://github.com/zerozshare/FastGet)を最新のAPIに対
 4. ｢パッケージ化されていない拡張機能を読み込む｣を押す<br>
 5. 解凍したファイルを選択する<br>
 6. 拡張機能アイコンをクリックして設定画面を出す
-<img src="https://i.imgur.com/6YOExhf.png" width="200">
+<img src="https://i.imgur.com/Ie9FggJ.png" width="200">
 7. APIキーを入力する(設定してない場合は飛ばしてok)<br>
 8. 完了✅️
