@@ -4,7 +4,7 @@ console.log('[FSS] content.js loaded');
 
 const SPIGET_API_BASE = 'https://api.spiget.org/v2';
 
-const FALLBACK_ICON_PATH = 'images/defaulticon.png';
+const FALLBACK_ICON_PATH = 'images/fssicon.png';
 
 const st = {
     base: '',
@@ -107,7 +107,7 @@ const pendingRequests = new Map();
 
 async function lazy_icon(id, img_el) {
 
-    const fallbackUrl = chrome.runtime.getURL('images/defaulticon.png');
+    const fallbackUrl = chrome.runtime.getURL('images/fssicon.png');
 
     if (iconCache.has(id)) {
         const cachedUrl = iconCache.get(id);
@@ -548,7 +548,7 @@ async function showServerSelection(servers) {
 
             const img = document.createElement('img');
 
-            img.src = chrome.runtime.getURL('images/defaulticon.png');
+            img.src = chrome.runtime.getURL('images/fssicon.png');
             img.style.cssText = 'width:40px;height:40px;border-radius:8px;object-fit:cover; border: 1px solid #ddd;';
             img.setAttribute('data-server-id', s.id);
 
