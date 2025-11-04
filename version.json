@@ -1,5 +1,6 @@
 {
   "version": 1,
   "name": "v1.0.0",
-  "download": "https://github.com/CountyClaaw4/FastGetPlus/releases/download/1.0.0/FastGet+v1.0.0.zip" 
+  "download": "https://github.com/CountyClaaw4/FastGetPlus/releases/download/1.0.0/FastGet+v1.0.0.zip" ,
+  "changelog": "https://github.com/CountyClaaw4/FastGetPlus/releases/tag/1.0.0"
 }
