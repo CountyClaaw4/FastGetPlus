@@ -1,5 +1,16 @@
 {
-  "latest": "1.0.0",
-  "download": "https://github.com/CountyClaaw4/FastGetPlus/releases/download/1.0.0/FastGet+v1.0.0.zip" ,
-  "changelog": "https://github.com/CountyClaaw4/FastGetPlus/releases/tag/1.0.0"
+  "version": "1.0.0",
+  "display_name": "v1.0.0",
+  "is_required": false,
+  "release_info": {
+    "published_at": "2025-10-13T12:00:00Z",
+    "changelog_url": "https://github.com/CountyClaaw4/FastGetPlus/releases/tag/1.0.0"
+  },
+  "asset": {
+    "file_name": "FastGet+v1.0.0.zip",
+    "file_size": 20987,
+    "sha256": "dbc2407e660542a6ce3cfea2646b1f3c6d6ea33d44fb9b468e24387bcc0fb4ab",
+    "download_url": "https://github.com/CountyClaaw4/FastGetPlus/releases/download/1.0.0/FastGet+v1.0.0.zip",
+    "mirrors": []
+  }
 }
